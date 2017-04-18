@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/coordinator"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:paddingTop="16dp">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:animateLayoutChanges="true">
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/text_input_layout_date_of_birth"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintLeft_toRightOf="@+id/guideline_left"
+                app:layout_constraintRight_toLeftOf="@+id/guideline_right"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/text_input_edit_text_date_of_birth"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="birth_hint" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/text_input_layout_town_of_birth"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                app:layout_constraintLeft_toRightOf="@+id/guideline_left"
+                app:layout_constraintRight_toLeftOf="@+id/guideline_right"
+                app:layout_constraintTop_toBottomOf="@+id/text_input_layout_date_of_birth">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/text_input_edit_text_town_of_birth"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="town hint" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/text_input_layout_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                app:layout_constraintLeft_toRightOf="@+id/guideline_left"
+                app:layout_constraintRight_toLeftOf="@+id/guideline_right"
+                app:layout_constraintTop_toBottomOf="@+id/text_input_layout_town_of_birth">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/text_input_edit_text_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Name" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <View
+                android:id="@+id/divider_1"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/divider"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/text_input_layout_name" />
+
+            <TextView
+                android:id="@+id/text_view_previous_names"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="This is a very very very long label that wraps on the second line"
+                app:layout_constraintLeft_toRightOf="@+id/guideline_left"
+                app:layout_constraintRight_toLeftOf="@+id/switch_1"
+                app:layout_constraintTop_toBottomOf="@+id/divider_1" />
+
+            <android.support.v7.widget.SwitchCompat
+                android:id="@+id/switch_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                app:layout_constraintLeft_toRightOf="@+id/text_view_previous_names"
+                app:layout_constraintRight_toLeftOf="@+id/guideline_right"
+                app:layout_constraintTop_toBottomOf="@+id/divider_1" />
+
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/text_input_layout_previous_names"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:visibility="gone"
+                app:layout_constraintLeft_toLeftOf="@+id/guideline_left"
+                app:layout_constraintRight_toLeftOf="@+id/guideline_right"
+                app:layout_constraintTop_toBottomOf="@+id/text_view_previous_names"
+                tools:visibility="visible">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/text_input_edit_text_previous_names"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Previous names" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <View
+                android:id="@+id/divider_2"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/divider"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/text_input_layout_previous_names" />
+
+            <TextView
+                android:id="@+id/extra_field"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="extra field"
+                app:layout_constraintLeft_toRightOf="@+id/guideline_left"
+                app:layout_constraintRight_toLeftOf="@+id/switch_2"
+                app:layout_constraintTop_toBottomOf="@+id/divider_2" />
+
+            <android.support.v7.widget.SwitchCompat
+                android:id="@+id/switch_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                app:layout_constraintLeft_toRightOf="@+id/extra_field"
+                app:layout_constraintRight_toLeftOf="@+id/guideline_right"
+                app:layout_constraintTop_toBottomOf="@+id/divider_2" />
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/text_input_layout_extra_field"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:visibility="gone"
+                app:layout_constraintLeft_toLeftOf="@+id/guideline_left"
+                app:layout_constraintRight_toLeftOf="@+id/guideline_right"
+                app:layout_constraintTop_toBottomOf="@+id/extra_field"
+                tools:visibility="visible">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/text_input_edit_text_extra_field"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="extra field hint" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <View
+                android:id="@+id/divider_3"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/divider"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/text_input_layout_extra_field" />
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/input_layout_extra_1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                app:layout_constraintLeft_toLeftOf="@+id/guideline_left"
+                app:layout_constraintRight_toLeftOf="@+id/guideline_right"
+                app:layout_constraintTop_toBottomOf="@+id/divider_3">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/edit_text_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="new_1" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/input_layout_extra_2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                app:layout_constraintLeft_toLeftOf="@+id/guideline_left"
+                app:layout_constraintRight_toLeftOf="@+id/guideline_right"
+                app:layout_constraintTop_toBottomOf="@+id/input_layout_extra_1">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/edit_text_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="new_2" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toTopOf="@+id/text_view_label_above_button"
+                app:layout_constraintLeft_toRightOf="@id/guideline_left"
+                app:layout_constraintRight_toLeftOf="@id/guideline_right"
+                app:layout_constraintTop_toBottomOf="@id/input_layout_extra_2" />
+
+            <TextView
+                android:id="@+id/text_view_label_above_button"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="label right above button"
+                app:layout_constraintBottom_toTopOf="@+id/button"
+                app:layout_constraintLeft_toRightOf="@id/guideline_left"
+                app:layout_constraintRight_toLeftOf="@id/guideline_right" />
+
+            <Button
+                android:id="@+id/button"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:layout_marginTop="16dp"
+                android:text="CONFIRM"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toRightOf="@+id/guideline_left"
+                app:layout_constraintRight_toLeftOf="@+id/guideline_right" />
+
+            <android.support.constraint.Guideline
+                android:id="@+id/guideline_left"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_begin="16dp" />
+
+            <android.support.constraint.Guideline
+                android:id="@+id/guideline_right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_end="16dp" />
+
+        </android.support.constraint.ConstraintLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+</android.support.design.widget.CoordinatorLayout>
