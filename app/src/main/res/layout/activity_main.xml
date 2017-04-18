@@ -85,7 +85,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
-                android:text="This is a very very very long label that wraps on the second line"
+                android:text="@string/problem"
                 app:layout_constraintLeft_toRightOf="@+id/guideline_left"
                 app:layout_constraintRight_toLeftOf="@+id/switch_1"
                 app:layout_constraintTop_toBottomOf="@+id/divider_1" />
