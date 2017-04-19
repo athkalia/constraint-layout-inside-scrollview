@@ -10,8 +10,8 @@ import butterknife.OnCheckedChanged;
 
 public class MainActivity extends AppCompatActivity {
 
-    @BindView(R.id.text_input_layout_extra_field) TextInputLayout textInputLayoutArmedForcesEnlistingDate;
-    @BindView(R.id.text_input_layout_previous_names) TextInputLayout textInputLayoutPreviousPracticeName;
+    @BindView(R.id.text_input_layout_extra_field) TextInputLayout secondTextInputLayout;
+    @BindView(R.id.text_input_layout_previous_names) TextInputLayout firstTextInputLayout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,20 +21,20 @@ public class MainActivity extends AppCompatActivity {
     }
 
     @OnCheckedChanged(R.id.switch_1)
-    public void registeredWithPracticeInUkClicked(boolean enabled) {
+    public void firstSwitchClicked(boolean enabled) {
         if (enabled) {
-            textInputLayoutPreviousPracticeName.setVisibility(View.VISIBLE);
+            firstTextInputLayout.setVisibility(View.VISIBLE);
         } else {
-            textInputLayoutPreviousPracticeName.setVisibility(View.GONE);
+            firstTextInputLayout.setVisibility(View.GONE);
         }
     }
 
     @OnCheckedChanged(R.id.switch_2)
-    public void returningFromTheArmedForcesClicked(boolean enabled) {
+    public void secondSwitchClicked(boolean enabled) {
         if (enabled) {
-            textInputLayoutArmedForcesEnlistingDate.setVisibility(View.VISIBLE);
+            secondTextInputLayout.setVisibility(View.VISIBLE);
         } else {
-            textInputLayoutArmedForcesEnlistingDate.setVisibility(View.GONE);
+            secondTextInputLayout.setVisibility(View.GONE);
         }
     }
 
